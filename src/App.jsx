@@ -56,7 +56,7 @@ function App() {
       {/* Sticky Mobile CTA */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-zinc-950/80 backdrop-blur-xl border-t border-zinc-800 z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
         <a 
-          href="https://www.hostinger.com/vps-hosting?utm_source=reddit&utm_medium=cpc&utm_campaign=vps_calc"
+          href="https://www.hostinger.com/pk?REFERRALCODE=9F2KHANMIN6W"
           target="_blank" 
           rel="noopener noreferrer"
           className="flex items-center justify-center w-full py-3.5 px-4 bg-emerald-500 hover:bg-emerald-400 text-white text-base font-bold rounded-xl transition-colors shadow-[0_0_15px_-3px_rgba(16,185,129,0.4)]"
