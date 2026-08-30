@@ -75,7 +75,7 @@ export default function CostComparisonView({ costs }) {
             </p>
             
             <a 
-              href="https://www.hostinger.com/vps-hosting?utm_source=reddit&utm_medium=cpc&utm_campaign=vps_calc"
+              href="https://www.hostinger.com/pk?REFERRALCODE=9F2KHANMIN6W"
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center justify-center w-full py-2.5 px-4 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 text-sm font-semibold rounded-xl border border-emerald-500/30 transition-all duration-200"

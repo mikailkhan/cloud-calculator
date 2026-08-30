@@ -4,7 +4,7 @@ import { Rocket } from 'lucide-react';
 export default function ConversionBanner({ costs }) {
   const getHostingerLink = () => {
     // UTM parameters for Reddit ads as specified in the PRD
-    return "https://www.hostinger.com/vps-hosting?utm_source=reddit&utm_medium=cpc&utm_campaign=vps_calc";
+    return "https://www.hostinger.com/pk?REFERRALCODE=9F2KHANMIN6W";
   };
 
   const bandwidth = costs.vpsTierName.match(/\((.*?)\)/)?.[1] || "Bandwidth";
