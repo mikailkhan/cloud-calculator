@@ -1,9 +1,10 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Header from './components/Header';
 import CalculatorForm from './components/CalculatorForm';
 import CostComparisonView from './components/CostComparisonView';
 import ConversionBanner from './components/ConversionBanner';
 import { calculateCosts } from './utils/pricingLogic';
+import { trackAffiliateClick, trackCalculation } from './utils/analytics';
 import { Rocket } from 'lucide-react';
 
 function App() {
@@ -16,6 +17,14 @@ function App() {
   });
 
   const costs = useMemo(() => calculateCosts(requests, dbTier, stackConfig), [requests, dbTier, stackConfig]);
+
+  // Debounced tracking for calculator adjustments
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      trackCalculation(requests, dbTier, stackConfig);
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, [requests, dbTier, stackConfig]);
 
   return (
     <div className="min-h-screen bg-zinc-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(16,185,129,0.1),rgba(255,255,255,0))] font-sans overflow-x-hidden selection:bg-emerald-500/30">
@@ -59,6 +68,7 @@ function App() {
           href="https://www.hostinger.com/pk?REFERRALCODE=9F2KHANMIN6W"
           target="_blank" 
           rel="noopener noreferrer"
+          onClick={() => trackAffiliateClick('mobile_sticky_cta', { vps_tier: costs?.vpsTierName })}
           className="flex items-center justify-center w-full py-3.5 px-4 bg-emerald-500 hover:bg-emerald-400 text-white text-base font-bold rounded-xl transition-colors shadow-[0_0_15px_-3px_rgba(16,185,129,0.4)]"
         >
           <span className="flex items-center">

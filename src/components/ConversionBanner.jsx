@@ -1,5 +1,6 @@
 import React from 'react';
 import { Rocket } from 'lucide-react';
+import { trackAffiliateClick } from '../utils/analytics';
 
 export default function ConversionBanner({ costs }) {
   const getHostingerLink = () => {
@@ -17,6 +18,11 @@ export default function ConversionBanner({ costs }) {
           href={getHostingerLink()} 
           target="_blank" 
           rel="noopener noreferrer"
+          onClick={() => trackAffiliateClick('main_conversion_banner', { 
+            vps_tier: costs?.vpsTierName, 
+            discounted_price: discountedPrice,
+            bandwidth: bandwidth,
+          })}
           className="group relative inline-flex items-center justify-center px-6 py-4 md:px-8 md:py-5 font-bold text-white transition-all duration-300 bg-emerald-500 rounded-2xl hover:bg-emerald-400 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 focus:ring-offset-zinc-900 shadow-[0_0_20px_-5px_rgba(16,185,129,0.5)] hover:shadow-[0_0_40px_-5px_rgba(16,185,129,0.7)] w-full sm:w-auto"
         >
           <span className="absolute inset-0 w-full h-full -mt-1 rounded-2xl opacity-30 bg-gradient-to-b from-transparent via-transparent to-black pointer-events-none"></span>
