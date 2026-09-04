@@ -69,12 +69,14 @@ function App() {
           target="_blank" 
           rel="noopener noreferrer"
           onClick={() => trackAffiliateClick('mobile_sticky_cta', { vps_tier: costs?.vpsTierName })}
-          className="flex items-center justify-center w-full py-3.5 px-4 bg-emerald-500 hover:bg-emerald-400 text-white text-base font-bold rounded-xl transition-colors shadow-[0_0_15px_-3px_rgba(16,185,129,0.4)]"
+          className="flex items-center justify-between w-full py-3 px-3 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-xl transition-colors shadow-[0_0_15px_-3px_rgba(16,185,129,0.4)] gap-2"
         >
-          <span className="flex items-center">
-            Deploy & Claim <span className="bg-white text-emerald-600 px-1.5 py-0.5 rounded text-xs mx-1.5 uppercase font-bold">20% Off</span>
+          <span className="text-xs sm:text-sm text-left leading-tight truncate">
+            Get Hostinger VPS ($4.99/mo)
           </span>
-          <Rocket className="w-5 h-5 ml-1" />
+          <span className="bg-white text-emerald-600 px-2 py-1 rounded text-[10px] sm:text-xs uppercase font-extrabold whitespace-nowrap shadow-sm">
+            Claim 20% OFF
+          </span>
         </a>
       </div>
     </div>

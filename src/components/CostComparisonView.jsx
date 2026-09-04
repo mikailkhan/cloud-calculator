@@ -78,23 +78,29 @@ export default function CostComparisonView({ costs }) {
               href="https://www.hostinger.com/pk?REFERRALCODE=9F2KHANMIN6W"
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-full py-2.5 px-4 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 text-sm font-semibold rounded-xl border border-emerald-500/30 transition-all duration-200"
+              className="flex items-center justify-center w-full py-2.5 px-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-sm sm:text-base font-bold rounded-lg transition-all shadow-lg shadow-emerald-500/20"
             >
-              Deploy Now <Rocket className="w-4 h-4 ml-2" />
+              Get Hostinger VPS ($4.99/mo)
             </a>
           </div>
         </div>
       </div>
 
       {/* Bill Shock Callout */}
-      <div className="mt-8 bg-zinc-900/50 rounded-2xl p-6 border border-rose-500/20 text-center relative overflow-hidden">
+      <div className="mt-8 bg-zinc-900/50 rounded-2xl p-6 border border-rose-500/20 text-center relative overflow-hidden flex flex-col items-center">
         <div className="absolute inset-0 bg-gradient-to-r from-rose-500/5 via-transparent to-rose-500/5 pointer-events-none"></div>
         <AlertCircle className="w-8 h-8 text-rose-500/80 mx-auto mb-3" />
-        <p className="text-zinc-300 text-lg md:text-xl font-medium">
+        <p className="text-zinc-300 text-lg md:text-xl font-medium mb-4">
           You are projected to waste <span className="text-rose-400 font-bold text-2xl md:text-3xl mx-2 drop-shadow-[0_0_8px_rgba(244,63,94,0.4)]">${costs.annualSavings.toLocaleString()}</span> a year on managed cloud taxes.
-          <br className="hidden md:block" />
-          <span className="text-emerald-400 font-semibold mt-2 inline-block">Lock in your VPS with 20% off today.</span>
         </p>
+        <a 
+          href="https://www.hostinger.com/pk?REFERRALCODE=9F2KHANMIN6W"
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="w-full py-3 px-4 bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-extrabold rounded-xl text-center text-sm md:text-base cursor-pointer shadow-md transform active:scale-[0.98] transition"
+        >
+          Save ${costs.annualSavings.toLocaleString()}/yr – Claim 20% Off Hostinger →
+        </a>
       </div>
     </div>
   );
